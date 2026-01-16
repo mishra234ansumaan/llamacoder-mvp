@@ -1,73 +1,71 @@
-# React + TypeScript + Vite
+# LiveWaste 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+LiveWaste is a smart, real-time waste monitoring platform that enables citizens to report public garbage and helps authorities identify waste hotspots using Google technologies and AI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Problem Statement
 
-## React Compiler
+In many cities, public waste often goes unreported or is addressed too late, leading to unhygienic conditions, health risks, and poor urban cleanliness. Existing systems lack real-time visibility and citizen involvement.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Solution Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+LiveWaste empowers citizens to actively participate in maintaining cleanliness by reporting garbage through a simple mobile/web interface. Each report is geo-tagged, AI-verified, and visualized on an interactive map, enabling faster response and data-driven waste management.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Key Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- 📍 Real-time waste reporting with automatic location tagging  
+- 🗺️ Interactive Google Maps view with color-coded waste zones  
+- 🤖 AI-assisted image verification to reduce false reports  
+- 🏆 Leaderboard to encourage responsible citizen participation  
+- 📊 Centralized monitoring for waste hotspots  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Google Technologies Used
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Google Maps API** – Location visualization and mapping  
+- **Google ML Kit** – AI-based waste image verification  
+- **Firebase (Firestore & Storage)** – Real-time data storage and sync  
+- **Google Cloud Platform** – Scalable backend infrastructure  
+
+---
+
+## MVP / Demo Link
+
+👉 Live Demo: https://livewaste.vercel.app/ 
+👉 GitHub Repository: **https://github.com/mishra234ansumaan/livewasate**
+
+---
+
+## Tech Stack
+
+- React + TypeScript + Vite  
+- Tailwind CSS  
+- Firebase  
+- Google APIs  
+
+---
+
+## Future Enhancements
+
+- Waste type and severity classification using advanced AI  
+- Automated alerts to municipal cleaning teams  
+- Predictive analysis for waste-prone zones  
+- Offline reporting with auto-sync  
+
+---
+
+## 🎯 Impact
+
+LiveWaste transforms waste management into a transparent, participatory, and data-driven process, contributing to cleaner, healthier, and more sustainable cities.
+
+---
+
+##  Team
+
+Built as a hackathon project with a focus on real-world impact, simplicity, and scalability.
